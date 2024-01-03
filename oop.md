@@ -77,6 +77,8 @@
             System.out.println("Cat meows");
         }
     }
+  - Dynamic Polymorphism
+  - Static Polymorphism
 - 7.5 Enumerations (Enums)
   - ```java
     // Example of using Enums
