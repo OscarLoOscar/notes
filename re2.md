@@ -102,6 +102,11 @@
         }
   - 4.2.2 Set
     - ```java
+      - add()
+      - remove()
+      - contains()
+      - size()
+    - ```java
       // Declaration and initialization of a Set (HashSet)
       Set<String> stringSet = new HashSet<>();
 
@@ -109,10 +114,23 @@
       stringSet.add("Red");
       stringSet.add("Green");
       stringSet.add("Blue");
+      stringSet.remove("Red");
 
       // Checking if an element exists in the Set
-      boolean containsBlue = stringSet.contains("Blue"); // true
+      boolean containsBlue = stringSet.contains("Blue"); // true 
+      stringSet.size(); // 2
   - 4.2.3 Map
+    - ```java
+      - put(K key , V value)
+      - get(Object key)
+      - remove(Object key)
+      - containsKey(Object key)
+      - containsValue(Object Value)
+      - isEmpty()
+      - size()
+      - keySet()
+      - values()
+      - entrySet()
     - ```java
       // Declaration and initialization of a Map (HashMap)
       Map<String, Integer> ageMap = new HashMap<>();
@@ -121,11 +139,23 @@
       ageMap.put("John", 25);
       ageMap.put("Jane", 30);
       ageMap.put("Bob", 22);
+      ageMap.remove("Jane");
 
       // Accessing values using keys
       int johnsAge = ageMap.get("John"); // 25
+      boolean keyExist = map.containsKey("John"); //true
+      boolean valueExist = map.containsValue(3); //false
+
   - 4.2.4 Queue
     - 4.2.4.1 Deque
+      - ```java
+        - addFirst(E element)
+        - addLast(E element)
+        - removeFirst(E element)
+        - removeLast(E element)
+        - pollFirst()
+        - pollLast()
+        ...
       - ```java
         // Declaration and initialization of a Deque (ArrayDeque)
         Deque<String> deque = new ArrayDeque<>();
@@ -143,26 +173,47 @@
             System.out.println(element);
         }
     - 4.2.4.2 PriorityQueue
-      - ```java
-        // Declaration and initialization of a PriorityQueue
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+      - Nature Order
+        - ```java
+          // Declaration and initialization of a PriorityQueue
+          PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
 
-        // Adding elements to the PriorityQueue
-        priorityQueue.add(3);
-        priorityQueue.add(1);
-        priorityQueue.add(2);
+          // Adding elements to the PriorityQueue
+           priorityQueue.add(3);
+           priorityQueue.add(1);
+           priorityQueue.add(2);
 
-        // Accessing and removing elements based on priority
-        int highestPriorityElement = priorityQueue.poll(); // 1
+          // Accessing and removing elements based on priority
+          int highestPriorityElement = priorityQueue.poll(); // 1
 
-        // Iterating through the PriorityQueue
-        for (int element : priorityQueue) {
-            System.out.println(element);
-        }
+          // Iterating through the PriorityQueue
+           for (int element : priorityQueue) {
+                System.out.println(element);
+          }
+      - Custom Priority
+        - ```java
+           PriorityQueue<Integer> priorityQueue2 = new PriorityQueue<>(b > a ? 1:-1);
+           priorityQueue.add(30);
+           priorityQueue.add(10);
+           priorityQueue.add(22);
+          
+          for (int element : priorityQueue) {
+                System.out.println(element); //30,22,10
+          }
+
+
+  - 4.2.5 Stack
+    - ```java
+      Stack<String> stack = new Stack<>();
+      stack.push("apple");
+      stack.push("banana");
+      String top = stack.pop(); // banana , pop() => 彈走無回頭
+      String top = stack.peek(); //apple , peek() => 觀察
+      boolean exist = stack.contains("orange"); //false
 
 ## 5. Useful Java Class      
 - Java Class
-  - 5.1 String Builder
+  - 5.1 StringBuilder
   - 5.2 Math
   - 5.3 BigDecimal
   - 5.4 LocalDate

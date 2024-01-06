@@ -77,8 +77,8 @@
             System.out.println("Cat meows");
         }
     }
-  - Dynamic Polymorphism
-  - Static Polymorphism
+  - ==Dynamic Polymorphism== => ==Compile-Time binding==/Early binding/==Method overloading==
+  - ==Static Polymorphism== => ==Run-Time binding==/Late binding/==Method overriding==
 - 7.5 Enumerations (Enums)
   - ```java
     // Example of using Enums
