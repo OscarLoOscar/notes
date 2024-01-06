@@ -3,6 +3,8 @@ title: Optional<T>
 source: https://cloud.tencent.com/developer/article/2360289?areaId=106001
 ---
 
+[Optional](https://hackmd.io/@oscarlo/optional)
+
 # Optional\<T\>
 
 使用 Optional 封裝可能為 null 的類別，提高代碼的可讀性和健壯性（在執行過程中處理錯誤，以及在遇到輸入、運算等異常時仍能維持正常運行的能力）。避免空指針異常（NullPointerException）。
