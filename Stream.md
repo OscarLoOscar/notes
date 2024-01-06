@@ -68,6 +68,7 @@ List<Integer> sortedNumbers = numbers.stream()//
 使用 map() 時，每個輸入元素都會被映射成一個輸出元素。
 結果是一對一的映射。
 ```java
+List<Integer> numbers = new ArrayList<>(List.of(1, 2, 2, 3, 4, 4, 5));
 List<Integer> squaredNumbers = numbers.stream()//
                                      .map(n -> n * n)//
                                      .collect(Collectors.toList());
