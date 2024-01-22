@@ -8,6 +8,8 @@
         + "" + super.age + "]";
   }
   ```
+
+  
 ```java
   @Override           //記//
   public boolean equals(Object o){
